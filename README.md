@@ -20,13 +20,19 @@ Your mission in **Hitten Box** is straightforward:
 Use your wits and reflexes to overcome challenges in this minimalist yet exciting survival game.
 
 ## 🖼️ Preview
-![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
+Here are some snapshots of the gameplay:  
 
-![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/RzK8Jl.png?raw=true)
+![Hitten Box Gameplay 1](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)  
+*Explore the map and survive the challenges!*  
 
-![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/yWF2Vw.png?raw=true)
+![Hitten Box Gameplay 2](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/RzK8Jl.png?raw=true)  
+*Play solo or with friends for more fun!*  
 
-![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/a_ui1R.png?raw=true)
+![Hitten Box Gameplay 3](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/yWF2Vw.png?raw=true)  
+*Navigate obstacles and test your reflexes!*  
+
+![Hitten Box Gameplay 4](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/a_ui1R.png?raw=true)  
+*Survive as long as you can while enjoying the gameplay!*  
 
 ## 🖥️ System Requirements
 - **Platform:** Windows only 🪟  
