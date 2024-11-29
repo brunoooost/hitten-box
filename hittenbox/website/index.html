@@ -1,1 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitten Box</title>
+    <style>
+        /* Estilos Globales */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
+        /* Animaciones de entrada */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Barra de navegación */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0; /* Reducido el padding para hacerla más estrecha */
+            z-index: 10;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Espaciado horizontal para los elementos */
+            height: 50px; /* Establecer una altura fija para la barra de navegación */
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem; /* Reducido el tamaño de la fuente */
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #e91e63;
+        }
+
+        /* Hero Section con Imagen de Fondo Semi-Transparente */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://github.com/brunoooost/hitten-box/blob/main/hittenbox/a_ui1R.png?raw=true') no-repeat center center/cover;
+            opacity: 0.5; /* Ajuste de opacidad para el fondo */
+            z-index: -1; /* Pone la imagen de fondo detrás del contenido */
+        }
+
+        .hero-content {
+            animation: scaleUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background-color: #e91e63;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #d81b60;
+        }
+
+        /* Características del Juego */
+        .features {
+            padding: 80px 20px;
+            background-color: #222;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .feature-item {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        .feature-item h3 {
+            font-size: 1.5rem;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+        }
+
+        /* Galería de Imágenes */
+        .gallery {
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .image-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .image-slider img {
+            border-radius: 10px;
+            width: 250px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .image-slider img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Descargar Sección */
+        .download {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #222;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .download p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .download-icon-button {
+            background-color: #1d1d1d;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-icon-button img {
+            width: 30px;
+            margin-right: 10px;
+        }
+
+        .download-icon-button:hover {
+            background-color: #e91e63;
+        }
+
+        /* Opiniones */
+        .reviews {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #333;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .review-card {
+            background-color: #444;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #e91e63;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Hitten Box</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#download">Descargar</a></li>
+                <li><a href="#reviews">Opiniones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero con Imagen de Fondo -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">¡Bienvenido a Hitten Box!</h1>
+            <p class="fade-in">Un juego lleno de acción, velocidad y estrategia.</p>
+            <a href="#download" class="cta-button">Jugar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Características del juego -->
+    <section id="features" class="features fade-in">
+        <h2>Características del Juego</h2>
+        <div class="feature-list">
+            <div class="feature-item fade-in">
+                <h3>Modos de Juego</h3>
+                <p>Varias formas de jugar, cada una con su propio desafío.</p>
+            </div>
+            <div class="feature-item fade-in">
+                <h3>Gráficos de Alta Calidad</h3>
+                <p>Un diseño visualmente atractivo que se adapta a cualquier pantalla.</p>
+            </div>
+            <div class="feature-item fade-in">
+                <h3>Acción Rápida</h3>
+                <p>Acción sin descanso, ¡una experiencia intensa!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section id="gallery" class="gallery fade-in">
+        <h2>Imágenes del Juego</h2>
+        <div class="image-slider">
+            <img src="https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true" alt="Captura 1">
+            <img src="https://github.com/brunoooost/hitten-box/blob/main/hittenbox/RzK8Jl.png?raw=true" alt="Captura 2">
+            <img src="https://github.com/brunoooost/hitten-box/blob/main/hittenbox/a_ui1R.png?raw=true" alt="Captura 3">
+            <img src="https://github.com/brunoooost/hitten-box/blob/main/hittenbox/yWF2Vw.png?raw=true" alt="Captura 4">
+        </div>
+    </section>
+
+    <!-- Descargar -->
+    <section id="download" class="download fade-in">
+        <h2>Descargar Hitten Box</h2>
+        <p>Descarga el juego ahora y empieza a disfrutar de la acción. ¡No esperes más!</p>
+        <div class="download-buttons">
+            <a href="https://brunoooost04.itch.io/hitten-box" class="cta-button">Descargar en Itch.io</a>
+        </div>
+    </section>
+
+    <!-- Opiniones -->
+    <section id="reviews" class="reviews fade-in">
+        <h2>Opiniones de Jugadores</h2>
+      
+        <div class="review-card fade-in">
+            <p>Es simple pero adictivo; si aguantas 10 minutos, te llevas mis respetos" - Ricardo Jimenez</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Desarrollado por bst04</p>
+        <p><a href="https://brunoooost04.itch.io">Visítanos en Itch.io</a> - <a href="https://github.com/brunoooost/hitten-box/tree/main">Github</a></p>
+    </footer>
+</body>
+</html>
