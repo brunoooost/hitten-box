@@ -21,7 +21,7 @@ Use your wits and reflexes to overcome challenges in this minimalist yet excitin
 
 ## 🖼️ Preview
 ![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
-![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
+![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/RzK8Jl.png?raw=true)
 ![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
 ![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
 
