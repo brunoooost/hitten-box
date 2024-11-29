@@ -19,6 +19,12 @@ Your mission in **Hitten Box** is straightforward:
 - 😄 Have fun while exploring the map.  
 Use your wits and reflexes to overcome challenges in this minimalist yet exciting survival game.
 
+## 🖼️ Preview
+![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
+![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
+![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
+![Hitten Box Gameplay](https://github.com/brunoooost/hitten-box/blob/main/hittenbox/PYpp0z.png?raw=true)
+
 ## 🖥️ System Requirements
 - **Platform:** Windows only 🪟  
 - **Download Size:** ~35 MB 💾
